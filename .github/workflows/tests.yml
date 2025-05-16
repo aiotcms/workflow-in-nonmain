@@ -6,7 +6,7 @@ name: UnitTests
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "unittests" ]
+    branches: [ "aiotcms-patch-1" ]
   pull_request:
     branches: [ "unittests" ]
 
@@ -15,6 +15,15 @@ on:
     inputs:
       logLevel:
         description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      logLevel:
+        description: 'Log level1'
         required: true
         default: 'warning'
         type: choice
